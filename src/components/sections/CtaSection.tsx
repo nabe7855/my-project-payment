@@ -43,7 +43,7 @@ const CtaSection: React.FC<CtaSectionProps> = ({ includeForm = false }) => (
                    )}
                 </div>
             </div>
-            <a href="tel:0120016044">
+            <a href="tel:0120999999">
                 <img className="hidden md:block mx-auto" src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/cv-tel-img.png" alt="Call us"/>
                 <img className="md:hidden mx-auto" src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/cv-tel-img-sp.png" alt="Call us SP"/>
             </a>

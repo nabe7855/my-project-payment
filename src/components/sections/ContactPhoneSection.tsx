@@ -24,7 +24,7 @@ const ContactPhoneSection: React.FC = () => (
                 <p className="text-2xl md:text-4xl font-bold text-[#383838] mb-2">お電話からのご相談はこちらから</p>
                 <a href="tel:0120016044" className="flex items-center justify-center font-['Roboto'] font-bold text-[#00693e] text-6xl md:text-[120px] mb-2">
                     <img src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/icon-phone.png" alt="phone" className="h-10 w-10 md:h-20 md:w-20 mr-4"/>
-                    0120-016-044
+                    0120-999-999
                 </a>
                 <p className="bg-white border border-[#d5d5d5] inline-block py-2 px-8 md:py-4 md:px-16 text-xl md:text-2xl rounded-sm">年中無休｜受付24時間対応</p>
              </div>

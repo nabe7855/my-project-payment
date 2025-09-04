@@ -16,7 +16,7 @@ const StickyCta: React.FC = () => {
         <a href="#contact" className="flex-1">
           <img src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/f-mail.png" alt="Email Inquiry" className="h-[58px] w-full object-contain" />
         </a>
-        <a href="tel:0120016044" className="flex-1">
+        <a href="tel:0120999999" className="flex-1">
           <img src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/f-tel.png" alt="Phone Inquiry" className="h-[58px] w-full object-contain" />
         </a>
       </div>

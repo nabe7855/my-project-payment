@@ -26,12 +26,12 @@ import AssuranceSection from '@/components/sections/AssuranceSection';
 import SolutionSection from '@/components/sections/SolutionSection';
 import ReasonTitleSection from '@/components/sections/ReasonTitleSection';
 import ReasonSection from '@/components/sections/ReasonSection';
-import WhySection from '@/components/sections/WhySection';
+//import WhySection from '@/components/sections/WhySection';
 import EtcSection from '@/components/sections/EtcSection';
 import FeatureTitleSection from '@/components/sections/FeatureTitleSection';
 import FeatureYearSection from '@/components/sections/FeatureYearSection';
-import FeatureMediaSection from '@/components/sections/FeatureMediaSection';
-import YoutubeSection from '@/components/sections/YoutubeSection';
+//import FeatureMediaSection from '@/components/sections/FeatureMediaSection';
+//import YoutubeSection from '@/components/sections/YoutubeSection';
 import ScrollingBanner from '@/components/sections/ScrollingBanner';
 import VoiceSection from '@/components/sections/VoiceSection';
 import FaqSection from '@/components/FaqSection';
@@ -51,16 +51,7 @@ const App: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     // ハードコードされたサイトデータ。本来はAPIなどから取得することを想定。
-    const siteData = {
-        inheritanceCount: "5,276",
-        inheritanceCountTerm: "※2023.10-2024.9",
-        souzokStaffCount: "487",
-        officeCount: "88",
-        souzokusoudanCountYm: "2024年2月",
-        souzokusoudanCount: "868",
-        cSouzokusoudanCountY: "2023年",
-        cSouzokusoudanCount: "10,453",
-    };
+
 
     return (
         <div className="font-['Noto_Sans_JP'] text-[#333]">
@@ -78,14 +69,14 @@ const App: React.FC = () => {
                 <SolutionSection />
                 <ReasonTitleSection />
                 <ReasonSection />
-                <WhySection />
+                {/* <WhySection /> */}
                 <EtcSection />
                 {/* 2回目のCTAセクション（フォーム付き） */}
                 <CtaSection includeForm={true} />
                 <FeatureTitleSection />
                 <FeatureYearSection />
-                <FeatureMediaSection siteData={siteData} />
-                <YoutubeSection siteData={siteData} />
+                {/* <FeatureMediaSection siteData={siteData} /> */}
+                {/* <YoutubeSection siteData={siteData} /> */}
                 <ScrollingBanner />
                 <VoiceSection />
                 <FaqSection />

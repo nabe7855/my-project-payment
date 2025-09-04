@@ -61,21 +61,23 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, navLinks }) 
       <header className="border-b border-[#00693e] bg-white">
         <div className="max-w-full mx-auto flex justify-between items-center h-16 md:h-[90px]">
           <div className="pl-2 md:pl-6">
-            <a href="https://www.ht-tax.or.jp/sozoku/">
-              <img src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/uploads/2024/05/logo-4.png" alt="Logo" className="h-8 md:h-12"/>
+            <a href="">
+                <span className="text-2xl md:text-3xl font-bold text-[#00693e]">
+    にこにこ相続センター
+  </span>
             </a>
           </div>
           <div className="flex items-center h-full">
             <div className="hidden md:flex items-center mr-8">
                 <div className="font-['Roboto'] font-bold text-[#00693e] text-4xl">
-                    <a href="tel:0120016044">0120-016-044</a>
+                    <a href="tel:0120999999">0120-999-999</a>
                 </div>
                  <div className="ml-4 text-xs text-gray-600">
                     <p>年中無休</p>
                     <p>受付24時間対応</p>
                 </div>
             </div>
-            <a href="tel:0120016044" className="md:hidden flex flex-col items-center justify-center h-full w-16 bg-[#ed8634] text-white border-r border-white">
+            <a href="tel:0120999999" className="md:hidden flex flex-col items-center justify-center h-full w-16 bg-[#ed8634] text-white border-r border-white">
                  <i className="fas fa-phone-alt mb-1 text-lg"></i>
                  <span className="text-[10px]">TEL</span>
             </a>
