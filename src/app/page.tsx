@@ -1,101 +1,101 @@
-import Image from "next/image";
+"use client";
+// src/App.tsx
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import React, { useState } from 'react';
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+// データ
+import { navLinks } from '@/data/siteData';
+
+// レイアウトコンポーネント
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import MainNav from '@/components/layout/MainNav';
+
+// UIコンポーネント
+import StickyCta from '@/components/StickyCta';
+
+// セクションコンポーネント
+import MainVisual from '@/components/sections/MainVisual';
+import AboutPlan from '@/components/sections/AboutPlan';
+import PaymentSection from '@/components/sections/PaymentSection';
+import FeatureBanner from '@/components/sections/FeatureBanner';
+import FlowSection from '@/components/sections/FlowSection';
+import CtaSection from '@/components/sections/CtaSection';
+import WorriesSection from '@/components/sections/WorriesSection';
+import AssuranceSection from '@/components/sections/AssuranceSection';
+import SolutionSection from '@/components/sections/SolutionSection';
+import ReasonTitleSection from '@/components/sections/ReasonTitleSection';
+import ReasonSection from '@/components/sections/ReasonSection';
+import WhySection from '@/components/sections/WhySection';
+import EtcSection from '@/components/sections/EtcSection';
+import FeatureTitleSection from '@/components/sections/FeatureTitleSection';
+import FeatureYearSection from '@/components/sections/FeatureYearSection';
+import FeatureMediaSection from '@/components/sections/FeatureMediaSection';
+import YoutubeSection from '@/components/sections/YoutubeSection';
+import ScrollingBanner from '@/components/sections/ScrollingBanner';
+import VoiceSection from '@/components/sections/VoiceSection';
+import FaqSection from '@/components/FaqSection';
+import ContactFormSection from '@/components/sections/ContactFormSection';
+import ContactPhoneSection from '@/components/sections/ContactPhoneSection';
+
+/**
+ * アプリケーションのメインコンポーネント
+ * 
+ * すべてのセクションを組み立てて、完全なランディングページを構築します。
+ * モバイルナビゲーションの開閉状態を管理します。
+ * 
+ * @returns {JSX.Element} ランディングページ全体
+ */
+const App: React.FC = () => {
+    // モバイルメニューの開閉状態を管理
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // ハードコードされたサイトデータ。本来はAPIなどから取得することを想定。
+    const siteData = {
+        inheritanceCount: "5,276",
+        inheritanceCountTerm: "※2023.10-2024.9",
+        souzokStaffCount: "487",
+        officeCount: "88",
+        souzokusoudanCountYm: "2024年2月",
+        souzokusoudanCount: "868",
+        cSouzokusoudanCountY: "2023年",
+        cSouzokusoudanCount: "10,453",
+    };
+
+    return (
+        <div className="font-['Noto_Sans_JP'] text-[#333]">
+            <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} navLinks={navLinks} />
+            <main>
+                <MainNav navLinks={navLinks} />
+                <MainVisual />
+                <AboutPlan />
+                <PaymentSection />
+                <FeatureBanner />
+                <FlowSection />
+                <CtaSection />
+                <WorriesSection />
+                <AssuranceSection />
+                <SolutionSection />
+                <ReasonTitleSection />
+                <ReasonSection />
+                <WhySection />
+                <EtcSection />
+                {/* 2回目のCTAセクション（フォーム付き） */}
+                <CtaSection includeForm={true} />
+                <FeatureTitleSection />
+                <FeatureYearSection />
+                <FeatureMediaSection siteData={siteData} />
+                <YoutubeSection siteData={siteData} />
+                <ScrollingBanner />
+                <VoiceSection />
+                <FaqSection />
+                <ContactFormSection />
+                <ContactPhoneSection />
+            </main>
+            <Footer navLinks={navLinks} />
+            <StickyCta />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+    );
+};
+
+export default App;
