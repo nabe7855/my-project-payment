@@ -28,7 +28,7 @@ const YoutubeSection: React.FC<YoutubeSectionProps> = ({ siteData }) => (
                  <img className="w-full" src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/youtube-circle.png" alt="Youtube background" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                      <img className="w-32 md:w-56" src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/section-youtube.png" alt="Youtube icon" />
-                     <p className="text-xl md:text-4xl text-[#383838] mt-4 mb-2 md:mb-4">辻・本郷 相続センター</p>
+                     <p className="text-xl md:text-4xl text-[#383838] mt-4 mb-2 md:mb-4">にこにこ 相続センター</p>
                      <img className="w-4/5 max-w-lg md:max-w-2xl" src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/title-youtube.png" alt="Youtube title" />
                 </div>
             </div>

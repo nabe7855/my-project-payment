@@ -40,7 +40,7 @@ const FeatureMediaSection: React.FC<FeatureMediaSectionProps> = ({ siteData }) =
                 <img className="mx-auto mb-16" src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/media-img.png" alt="Media appearances" />
                 <div className="space-y-12">
                     <div>
-                         <div className="bg-[#80b963] text-white text-2xl md:text-3xl rounded-t-3xl md:rounded-t-[40px] py-6">辻・本郷 税理士法人 会報誌「SCOPE（スコープ）」</div>
+                         <div className="bg-[#80b963] text-white text-2xl md:text-3xl rounded-t-3xl md:rounded-t-[40px] py-6">ニコニコ 税理士法人 会報誌「SCOPE（スコープ）」</div>
                          <div className="bg-white rounded-b-3xl md:rounded-b-[40px] p-8">
                              <img className="mx-auto" src="https://www.ht-tax.or.jp/sozoku/cms/wp-content/themes/sozoku-guide-lp/images/media-book-1.png" alt="SCOPE Magazine"/>
                          </div>

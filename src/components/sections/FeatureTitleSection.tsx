@@ -14,7 +14,7 @@ const FeatureTitleSection: React.FC = () => (
         <div className="max-w-6xl mx-auto px-4">
              <div className="inline-block bg-[#00693e] text-white font-bold rounded-full px-6 py-3 text-xl md:text-3xl mb-8">私たちに<b className="text-[#fff733] text-2xl md:text-4xl">お任せ</b>ください！</div>
              <h2 className="text-4xl md:text-6xl font-bold mb-3" style={{ textShadow: '4px 4px 0 #fff, -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff' }}>
-                 <span className="text-[#00693e] text-5xl md:text-8xl underline decoration-[#fff733] decoration-[24px] underline-offset-[-5px]">辻・本郷 税理士法人</span>が
+                 <span className="text-[#00693e] text-5xl md:text-8xl underline decoration-[#fff733] decoration-[24px] underline-offset-[-5px]">にこにこ相続センター 税理士法人</span>が
              </h2>
              <p className="text-4xl md:text-6xl font-bold text-[#383838]" style={{ textShadow: '4px 4px 0 #fff, -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff' }}>選ばれる理由</p>
              <div className="-mt-16">
