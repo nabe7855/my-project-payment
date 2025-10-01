@@ -11,6 +11,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        navy: "#1A237E", // 追加
+        gold: "#D4AF37", // 追加
+      },
+      fontFamily: {
+        sans: ['"Noto Sans JP"', "sans-serif"], // 追加
+        serif: ['"Noto Serif JP"', "serif"],   // 追加
       },
     },
   },
