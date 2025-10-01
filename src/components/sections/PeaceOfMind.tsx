@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const peaceOfMindPoints = [
@@ -8,20 +7,34 @@ const peaceOfMindPoints = [
   { title: '未来の安心', description: '相続手続きの完了後も、不動産の活用や将来の資産管理について継続的にサポート。未来の不安も解消します。' },
 ];
 
-// PeaceOfMind section: Details the benefits of the pack
 const PeaceOfMind: React.FC = () => {
   return (
     <section className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-navy mb-12">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-navy mb-6">
           このパックで得られる安心
         </h2>
+
+        {/* ✅ 見出しの下にイラストを表示 */}
+        <div className="flex justify-center mb-12">
+          <img
+            src="/images/団らん.png"
+            alt="家族の団らんのイメージ"
+            className="max-w-md rounded-lg shadow-lg"
+          />
+        </div>
+
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
           <div className="divide-y divide-gray-200">
             {peaceOfMindPoints.map((point, index) => (
-              <div key={index} className="p-6 md:p-8 grid md:grid-cols-3 gap-4 items-center hover:bg-navy hover:bg-opacity-5 transition-colors">
+              <div
+                key={index}
+                className="p-6 md:p-8 grid md:grid-cols-3 gap-4 items-center hover:bg-navy hover:bg-opacity-5 transition-colors"
+              >
                 <div className="md:col-span-1">
-                  <h3 className="text-xl font-bold text-gold text-center md:text-left">{point.title}</h3>
+                  <h3 className="text-xl font-bold text-gold text-center md:text-left">
+                    {point.title}
+                  </h3>
                 </div>
                 <div className="md:col-span-2">
                   <p className="text-gray-700">{point.description}</p>

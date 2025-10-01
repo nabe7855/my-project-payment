@@ -1,5 +1,7 @@
+"use client"; // ✅ Client Component化（Framer Motionを使うために必要）
 
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion"; // ✅ 追加
 
 // Hero section: The first view of the landing page
 const Hero: React.FC = () => {
@@ -13,21 +15,33 @@ const Hero: React.FC = () => {
             家族を守るワンストップ相続支援
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-bold text-gold">
-            相続の不安、まるごとお任せ33万円<span className="text-base font-normal text-white">(税込)</span>
+            相続の不安、まるごとお任せ33万円
+            <span className="text-base font-normal text-white">(税込)</span>
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
-            <a href="#contact" className="bg-gold text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90 transition-transform transform hover:scale-105">
+            <a
+              href="#contact"
+              className="bg-gold text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90 transition-transform transform hover:scale-105"
+            >
               ✅ 無料相談を申し込む
             </a>
-            <a href="#contact" className="bg-white text-navy border-2 border-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-transparent hover:text-white transition-colors">
+            <a
+              href="#contact"
+              className="bg-white text-navy border-2 border-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-transparent hover:text-white transition-colors"
+            >
               ✅ 資料をダウンロード
             </a>
           </div>
         </div>
         <div className="md:w-1/2 lg:w-2/5 mt-10 md:mt-0 flex justify-center">
-          <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-gold bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/seed/lawyer/400/400')" }}>
-            {/* Image of a professional consultation */}
-          </div>
+          {/* ✅ ロゴ部分を motion.div に変更 */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }} // 最初は小さく透明
+            animate={{ opacity: 1, scale: 1 }} // 表示されるときに拡大＋フェードイン
+            transition={{ duration: 1, ease: "easeOut" }} // 1秒かけて自然に出現
+            className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-gold bg-[#FCE8D8] bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/ロゴ.png')", backgroundSize: "140%" }}
+          />
         </div>
       </div>
     </section>
