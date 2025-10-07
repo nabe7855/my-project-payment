@@ -1,45 +1,53 @@
 {
   "compilerOptions": {
+    /* 🎯 基本設定 */
     "target": "ES2022",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "noEmit": true,
+    "incremental": true,
+
+    /* ⚙️ TypeScriptの動作関連 */
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
 
-    // ✅ AI 側から持ってきた拡張オプション
+    /* 🧩 拡張オプション（AI構成から統合） */
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
     "moduleDetection": "force",
     "allowImportingTsExtensions": true,
 
-    // ✅ Path alias
+    /* 🛣️ パスエイリアス設定 */
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
 
-    // ✅ Next.js plugin
+    /* 🧠 型定義 */
+    "types": ["node"],
+
+    /* 🧰 Next.js専用プラグイン */
     "plugins": [
       {
         "name": "next"
       }
-    ],
-
-    // ✅ 型定義
-    "types": ["node"]
+    ]
   },
+
+  /* 📦 コンパイル対象 */
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
+
+  /* 🚫 除外フォルダ */
   "exclude": ["node_modules"]
 }

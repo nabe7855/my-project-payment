@@ -11,15 +11,36 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        navy: "#1A237E", // 追加
-        gold: "#D4AF37", // 追加
+
+        // 🎨 ブランドカラー
+        navy: {
+          DEFAULT: "#0a2463", // メインネイビー
+          light: "#1e3a8a",   // 明るめネイビー
+        },
+        gold: {
+          DEFAULT: "#d4af37", // ゴールド
+          dark: "#b89b32",    // 濃いゴールド
+        },
+        "light-gray": "#f8f9fa", // 背景用ライトグレー
       },
       fontFamily: {
-        sans: ['"Noto Sans JP"', "sans-serif"], // 追加
-        serif: ['"Noto Serif JP"', "serif"],   // 追加
+        // 🖋 フォント設定（日本語対応）
+        sans: [
+          '"Noto Sans JP"',
+          '"Hiragino Sans"',
+          '"Helvetica Neue"',
+          "Arial",
+          "sans-serif",
+        ],
+        serif: [
+          '"Noto Serif JP"',
+          "Georgia",
+          "serif",
+        ],
       },
     },
   },
   plugins: [],
 };
+
 export default config;
